@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "gAf8tHguM0EhHTWItuUW+CS4qM8cMKxjyQTAcK0f6qDzKZLkxsv/Lopr99+PT1Va2Vj3M0WWE03jUt/LobuEQA==",
+  "success": true,
+  "projectFilePath": "D:\\Misc\\Personal Projects\\GameDev\\Monogame\\erasmus-engine\\ErasmusMG\\ErasmusMG\\ErasmusMG.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\chary\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+  ],
+  "logs": []
+}
