@@ -7,10 +7,4 @@
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logic\" />
-    <Folder Include="Importers\" />
-    <Folder Include="Graphics\" />
-    <Folder Include="Physics\" />
-  </ItemGroup>
 </Project>

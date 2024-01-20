@@ -12,7 +12,7 @@ public static class Engine
 
 
     // Importing and asset loading.
-    public static string ContentDir { get; set; }
+    public static string ContentDir { get; set; } = "";
 
 
     // Tree.

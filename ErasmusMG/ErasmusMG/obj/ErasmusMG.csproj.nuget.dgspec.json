@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Misc\\Personal Projects\\GameDev\\Monogame\\erasmus-engine\\ErasmusMG\\ErasmusMG\\ErasmusMG.csproj": {}
+    "C:\\Users\\charya\\Desktop\\Misc\\Personal-Projects\\Programming\\GameDev\\Monogame\\erasmus-mg\\ErasmusMG\\ErasmusMG\\ErasmusMG.csproj": {}
   },
   "projects": {
-    "D:\\Misc\\Personal Projects\\GameDev\\Monogame\\erasmus-engine\\ErasmusMG\\ErasmusMG\\ErasmusMG.csproj": {
+    "C:\\Users\\charya\\Desktop\\Misc\\Personal-Projects\\Programming\\GameDev\\Monogame\\erasmus-mg\\ErasmusMG\\ErasmusMG\\ErasmusMG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Misc\\Personal Projects\\GameDev\\Monogame\\erasmus-engine\\ErasmusMG\\ErasmusMG\\ErasmusMG.csproj",
+        "projectUniqueName": "C:\\Users\\charya\\Desktop\\Misc\\Personal-Projects\\Programming\\GameDev\\Monogame\\erasmus-mg\\ErasmusMG\\ErasmusMG\\ErasmusMG.csproj",
         "projectName": "ErasmusMG",
-        "projectPath": "D:\\Misc\\Personal Projects\\GameDev\\Monogame\\erasmus-engine\\ErasmusMG\\ErasmusMG\\ErasmusMG.csproj",
-        "packagesPath": "C:\\Users\\chary\\.nuget\\packages\\",
-        "outputPath": "D:\\Misc\\Personal Projects\\GameDev\\Monogame\\erasmus-engine\\ErasmusMG\\ErasmusMG\\obj\\",
+        "projectPath": "C:\\Users\\charya\\Desktop\\Misc\\Personal-Projects\\Programming\\GameDev\\Monogame\\erasmus-mg\\ErasmusMG\\ErasmusMG\\ErasmusMG.csproj",
+        "packagesPath": "C:\\Users\\charya\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\charya\\Desktop\\Misc\\Personal-Projects\\Programming\\GameDev\\Monogame\\erasmus-mg\\ErasmusMG\\ErasmusMG\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\chary\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\charya\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -25,7 +25,6 @@
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },

@@ -1,6 +1,9 @@
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Xml.Linq;
 
 namespace ErasmusMG.Tree;
 public class Root
@@ -19,14 +22,25 @@ public class Root
         this.rootComponent?.Load();
     }
     // Update.
-    public void Update(GameTime gameTime)
+    public void Update(double deltaTime)
     {
-        this.rootComponent?.Update(gameTime);
+        this.rootComponent?.Update(deltaTime);
     }
     // Draw.
-    public void Draw(GameTime gameTime)
+    public void Draw(double deltaTime)
     {
-        this.rootComponent?.Draw(gameTime);
+        this.rootComponent?.Draw(deltaTime);
+    }
+
+
+    /* ------------------------------------------------------------------------------------------------------------- */
+    /* ------------------------------------------ ROOT COMPONENT HANDLING ------------------------------------------ */
+
+    // Set root component.
+    public void SetRootComponent(Component c)
+    {
+        this.rootComponent = c;
+        this.Load();
     }
 
 
@@ -48,10 +62,10 @@ public class Root
         if (this.groups[gName].Count == 0) this.groups.Remove(gName); // If group becomes empty, remove it from dictionary of groups.
     }
     // Get list of components in a specific group.
-    public List<T>? GetComponentsInGroup<T>(string gName) where T : Component
+    public List<T> GetComponentsInGroup<T>(string gName) where T : Component
     {
         if (!this.groups.ContainsKey(gName)) return null; // Group does not exist.
-        return this.groups[gName] as List<T>;
+        return this.groups[gName].Cast<T>().ToList();
     }
 
 }
