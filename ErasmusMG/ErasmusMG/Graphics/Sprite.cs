@@ -8,15 +8,12 @@ using System.Diagnostics;
 namespace ErasmusMG.Graphics;
 public class Sprite : Drawable
 {
-    // Properties.
-    private Texture2D sprite;    
-
+    // Properties.  
 
 
     // Constructor.
-    public Sprite(string name, Vector2 size) : base(name, size)
+    public Sprite(string name, Vector2 size, string pathToTexture) : base(name, size, pathToTexture)
     {
-        this.sprite = Textures.LoadTexture2D("player.png");
     }
 
 
@@ -33,7 +30,8 @@ public class Sprite : Drawable
     // Draw.
     public override void Draw(double deltaTime)
     {
-        Engine.SpriteBatch.Draw(    this.sprite,
+        if (this.texture == null) return;
+        Engine.SpriteBatch.Draw(    this.texture,
                                     this.GlobalPosition,
                                     this.sourceRect,
                                     this.Tint,

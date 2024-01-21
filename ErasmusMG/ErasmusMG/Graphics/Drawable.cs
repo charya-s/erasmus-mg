@@ -7,8 +7,9 @@ namespace ErasmusMG.Graphics;
 public abstract class Drawable : Component
 {
     // Properties.
+    protected Texture2D texture = null;
     protected Vector2 size = Vector2.Zero;
-    public Vector2 ScaledSize = Vector2.Zero; // Size of the drawable component after scaling.s
+    public Vector2 ScaledSize = Vector2.Zero; // Size of the drawable component after scaling.
     protected Rectangle sourceRect { get; set; } = Rectangle.Empty;
     protected SpriteEffects effects { get; set; } = SpriteEffects.None;
     public Color Tint { get; set; } = Color.White;
@@ -18,8 +19,9 @@ public abstract class Drawable : Component
 
 
     // Constructor.
-    public Drawable(string name, Vector2 size) : base(name)
+    public Drawable(string name, Vector2 size, string pathToTexture) : base(name)
     {
+        this.texture = Textures.LoadTexture2D(pathToTexture);
         this.size = size;
         this.sourceRect = new Rectangle(0, 0, (int)size.X, (int)size.Y);
     }

@@ -15,12 +15,14 @@ public class Player : PhysicsBody
 
         // Set properties.
         this.GlobalPosition = new Vector2(200, 100);
-        this.Velocity = new Vector2(100, 0);
         this.Gravity = 0.10f;
 
         // Components.
-        Sprite sprite = new("Sprite", new Vector2(64, 64));
+        AnimatedSprite sprite = new("Sprite", new Vector2(56, 56), "player.png");
         this.AddChild(sprite);
+        sprite.AddAnimation("Idle", 0, 6, 5, Animation.LoopMode.Loop);
+        sprite.AddAnimation("Move", 2, 8, 10, Animation.LoopMode.Loop);
+        sprite.Play("Move");
         sprite.Position = new Vector2(0, 0);
         sprite.Scale = new Vector2(2, 2);
     }
