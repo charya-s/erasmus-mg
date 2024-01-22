@@ -43,7 +43,7 @@ public class AnimatedSprite : Sprite
     // Add animation.
     public void AddAnimation(string name, int sheetRow, int animLen, int frameRate, Animation.LoopMode loopMode)
     {
-        this.animations[name] = new Animation(name, sheetRow, animLen, this.size, frameRate, loopMode);
+        this.animations[name] = new Animation(name, sheetRow, animLen, this.Size, frameRate, loopMode);
         if (animations.Count == 1) this.Play(name); // If it's the first animation, set it to be the starting point.
     }
 }

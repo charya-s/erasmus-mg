@@ -54,3 +54,8 @@ C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\eras
 C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\obj\Debug\net6.0\ErasmusTest.genruntimeconfig.cache
 C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\obj\Debug\net6.0\ref\ErasmusTest.dll
 C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\Content\player.png
+C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\Cyotek.Drawing.BitmapFont.dll
+C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\SpriteFontPlus.dll
+C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\StbImageSharp.dll
+C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\StbTrueTypeSharp.dll
+C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\Content\font.TTF

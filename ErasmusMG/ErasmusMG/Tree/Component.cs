@@ -20,7 +20,7 @@ public class Component
     private Vector2 position = Vector2.Zero; // Position relative to parent.
     private Vector2 globalPosition = Vector2.Zero; // Position relative to window.
     public float Rotation { get; set; } = 0.0f;
-    public Vector2 Scale { get; set; } = Vector2.One;
+    public Vector2 scale { get; set; } = Vector2.One;
     public float LayerDepth { get; set; } = 0.0f;
 
 
@@ -55,6 +55,12 @@ public class Component
             // Adjust pos based on parent's global pos and own global pos.
             this.position = this.parent == null ? this.GlobalPosition : this.GlobalPosition - this.parent.GlobalPosition;
         }
+    }
+    // Scale.
+    public virtual Vector2 Scale
+    {
+        get { return this.scale; }
+        set { this.scale = value; }
     }
 
 
@@ -101,6 +107,7 @@ public class Component
     {
         child.SetParent(this); // Set child's parent as self.
         children.Add(child);
+        child.Load(); // Run loading method.
     }
     // Get child by name as specified type.
     public T GetChild<T>(string childName) where T : Component

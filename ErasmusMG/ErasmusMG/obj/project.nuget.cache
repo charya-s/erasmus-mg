@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "BpQJWfIqdkeVDQFss/0UweGHsZ3lTclDj1Ooq3IE2y2TZ7RuhWFgpli/hGvJyWr/YTZx40u2GLtgMJhFgEUr8g==",
+  "dgSpecHash": "SX3rsM+MFHV4HEuRaATfa6GdFyH2+Ml0IwlsOLtdKR1/fzXz44a7eYM5Rtrp9H4nenraedIsu8yk1W1qXXTaIg==",
   "success": true,
   "projectFilePath": "C:\\Users\\charya\\Desktop\\Misc\\Personal-Projects\\Programming\\GameDev\\Monogame\\erasmus-mg\\ErasmusMG\\ErasmusMG\\ErasmusMG.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\charya\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
+    "C:\\Users\\charya\\.nuget\\packages\\cyotek.drawing.bitmapfont\\2.0.1\\cyotek.drawing.bitmapfont.2.0.1.nupkg.sha512",
+    "C:\\Users\\charya\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.1.303\\monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
+    "C:\\Users\\charya\\.nuget\\packages\\spritefontplus\\0.9.2\\spritefontplus.0.9.2.nupkg.sha512",
+    "C:\\Users\\charya\\.nuget\\packages\\stbimagesharp\\2.22.4\\stbimagesharp.2.22.4.nupkg.sha512",
+    "C:\\Users\\charya\\.nuget\\packages\\stbtruetypesharp\\1.24.7\\stbtruetypesharp.1.24.7.nupkg.sha512"
   ],
   "logs": []
 }

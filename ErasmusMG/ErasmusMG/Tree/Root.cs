@@ -19,7 +19,7 @@ public class Root
     // Load.
     public void Load()
     {
-        this.rootComponent?.Load();
+        //this.rootComponent?.Load();
     }
     // Update.
     public void Update(double deltaTime)

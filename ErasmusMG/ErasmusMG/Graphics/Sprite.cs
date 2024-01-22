@@ -9,11 +9,13 @@ namespace ErasmusMG.Graphics;
 public class Sprite : Drawable
 {
     // Properties.  
+    protected Texture2D texture { get; private set; } = null;
 
 
     // Constructor.
-    public Sprite(string name, Vector2 size, string pathToTexture) : base(name, size, pathToTexture)
+    public Sprite(string name, Vector2 size, string pathToContent) : base(name, size, pathToContent)
     {
+        this.texture = Textures.LoadTexture2D(pathToContent);
     }
 
 
