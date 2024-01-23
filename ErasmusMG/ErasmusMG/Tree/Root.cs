@@ -10,7 +10,16 @@ public class Root
 {
     // Properties.
     private Dictionary<string, List<Component>> groups { get; set; } = new(); // Groups that components can be assigned to.
-    private Component? rootComponent { get; set; } // Root component that contains all other components. 
+    private Component rootComponent { get; set; } // Root component that contains all other components. 
+    private Queue<float> fpsValues = new(); // Last 100 FPS values.
+    public float GameFPS { get; private set; } = 0.0f;
+
+
+    // Constructor.
+    public Root()
+    {
+        this.rootComponent = new Component("Root");
+    }
 
 
     /* ------------------------------------------------------------------------------------------------------------- */
@@ -19,17 +28,17 @@ public class Root
     // Load.
     public void Load()
     {
-        //this.rootComponent?.Load();
     }
     // Update.
     public void Update(double deltaTime)
     {
-        this.rootComponent?.Update(deltaTime);
+        this.GetAvgFps(deltaTime);
+        this.rootComponent.Update(deltaTime);
     }
     // Draw.
     public void Draw(double deltaTime)
     {
-        this.rootComponent?.Draw(deltaTime);
+        this.rootComponent.Draw(deltaTime);
     }
 
 
@@ -37,10 +46,14 @@ public class Root
     /* ------------------------------------------ ROOT COMPONENT HANDLING ------------------------------------------ */
 
     // Set root component.
-    public void SetRootComponent(Component c)
+    public void AddToRoot(Component c)
     {
-        this.rootComponent = c;
-        this.Load();
+        this.rootComponent.AddChild(c);
+    }
+    // Get root component.
+    public Component GetRoot()
+    {
+        return this.rootComponent;
     }
 
 
@@ -68,4 +81,19 @@ public class Root
         return this.groups[gName].Cast<T>().ToList();
     }
 
+
+
+    // Calculate average fps.
+    private void GetAvgFps(double deltaTime)
+    {
+        float currFps = 1 / (float)deltaTime;
+        fpsValues.Enqueue(currFps); // Save current fps to queue.
+        if (fpsValues.Count > 100)
+        {
+            fpsValues.Dequeue();
+            this.GameFPS = fpsValues.Average(); // If queue is full, get average of it.
+        }
+        else this.GameFPS = currFps;            // Else, just get current fps.
+
+    }
 }

@@ -2,3 +2,38 @@
 ---
 
 @import "{{ site.theme }}";
+
+body {
+    background: whitesmoke;
+    color: darkslategray;
+}
+
+header {
+    border-bottom: 1px solid darksalmon;
+}
+
+.container {
+    width: 100%;
+    max-width: 70vw;
+    left: 20vw;
+}
+
+h1 {
+    color: darksalmon;
+}
+
+#main_content {    
+    margin-left: 10vw;
+}
+
+.navbar {
+    position: absolute;
+    margin: auto;
+    left: 5vw;
+}
+
+.nav-page:hover {
+    cursor: pointer;
+    color: darksalmon;
+    transition: 0.25s;
+}

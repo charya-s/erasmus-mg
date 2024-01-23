@@ -35,7 +35,6 @@ namespace ErasmusMG
         protected override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-            //Debug.WriteLine(1/gameTime.ElapsedGameTime.TotalSeconds);
         }
 
         protected override void Draw(GameTime gameTime)

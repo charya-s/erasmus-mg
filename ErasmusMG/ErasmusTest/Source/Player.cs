@@ -30,7 +30,7 @@ public class Player : PhysicsBody
         sprite.Scale = new Vector2(2, 2);
         sprite.Origin = new Vector2(sprite.Size.X / 2, sprite.Size.Y / 2);
 
-        TextLabel text = new("PlayerLabel", new Vector2(150, 40), "font.ttf", "Player");
+        TextLabel text = new("PlayerLabel", "font.ttf", "Player");
         this.AddChild(text);
         text.Position = new Vector2(0, -sprite.ScaledSize.Y/4);
         text.Tint = Color.Black;

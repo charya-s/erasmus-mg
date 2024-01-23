@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ErasmusTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e82be93f5f3ab91b9f8e4736ec8b597c9c0b32a6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70de00b8dc4ec15bf62bc23e22fa31a34e767cbb")]
 [assembly: System.Reflection.AssemblyProductAttribute("ErasmusTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ErasmusTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

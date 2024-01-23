@@ -9,15 +9,15 @@ public class TextLabel : Drawable
 {
     // Properties.  
     protected SpriteFont font;
-    protected string text { get; private set; }
+    public string Text { get; set; }
 
 
     // Constructor.
-    public TextLabel(string name, Vector2 size, string pathToContent, string text) : base(name, size, pathToContent)
+    public TextLabel(string name, string pathToContent, string text) : base(name, pathToContent)
     {
         this.font = Fonts.LoadTTF(pathToContent);
-        this.text = text;
-        this.Size = this.font.MeasureString(this.text);
+        this.Text = text;
+        this.Size = this.font.MeasureString(this.Text);
     }
 
 
@@ -35,7 +35,7 @@ public class TextLabel : Drawable
     public override void Draw(double deltaTime)
     {
         Engine.SpriteBatch.DrawString(  this.font,
-                                        this.text,
+                                        this.Text,
                                         this.GlobalPosition,
                                         this.Tint,
                                         this.Rotation,

@@ -19,7 +19,12 @@ public abstract class Drawable : Component
 
 
 
-    // Constructor.
+    // Constructors.
+    public Drawable(string name, string pathToContent) : base(name)
+    {
+        this.visibleBox = new Texture2D(Engine.Graphics.GraphicsDevice, 1, 1);
+        this.visibleBox.SetData(new Color[] { Color.LightBlue });
+    }
     public Drawable(string name, Vector2 size, string pathToContent) : base(name)
     {
         this.Size = size;
