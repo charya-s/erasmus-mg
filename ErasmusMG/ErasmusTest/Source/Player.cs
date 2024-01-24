@@ -3,6 +3,7 @@ using ErasmusMG.Graphics;
 using ErasmusMG.Physics;
 using Microsoft.Xna.Framework.Input;
 using System.Diagnostics;
+using System;
 
 namespace ErasmusTest.Source;
 public class Player : PhysicsBody
@@ -17,7 +18,7 @@ public class Player : PhysicsBody
         // Set properties.
         this.GlobalPosition = new Vector2(200, 100);
         this.Gravity = 0.10f;
-        this.Velocity = new Vector2(50, 0);
+        this.Velocity = new Vector2(0,0);
 
 
         // Components.
@@ -25,7 +26,9 @@ public class Player : PhysicsBody
         this.AddChild(sprite);
         sprite.AddAnimation("Idle", 0, 6, 5, Animation.LoopMode.Loop);
         sprite.AddAnimation("Move", 2, 8, 10, Animation.LoopMode.Loop);
-        sprite.Play("Move");
+        sprite.AddAnimation("Jump", 3, 8, 5, Animation.LoopMode.Loop);
+        sprite.AddAnimation("Fall", 4, 5, 5, Animation.LoopMode.Loop);
+        sprite.PlayAnimation("Idle");
         sprite.Position = new Vector2(0, 0);
         sprite.Scale = new Vector2(2, 2);
         sprite.Origin = new Vector2(sprite.Size.X / 2, sprite.Size.Y / 2);
@@ -44,5 +47,15 @@ public class Player : PhysicsBody
     {
         base.Update(deltaTime);
         this.MoveAndCollide(deltaTime);
+
+        if (Keyboard.GetState().IsKeyDown(Keys.A)) this.Velocity = new Vector2(-250, 0);
+            else if (Keyboard.GetState().IsKeyDown(Keys.D)) this.Velocity = new Vector2(250, 0);
+        else this.Velocity = new Vector2(0, 0);
+
+        if (MathF.Abs(this.Velocity.X) > 0.1f) this.GetChild<AnimatedSprite>("Sprite").PlayAnimation("Move");
+        else this.GetChild<AnimatedSprite>("Sprite").PlayAnimation("Idle");
+
+        if (this.Velocity.X > 0) this.GetChild<AnimatedSprite>("Sprite").FlipH(1);
+        else if (this.Velocity.X < 0) this.GetChild<AnimatedSprite>("Sprite").FlipH(-1);
     }
 }

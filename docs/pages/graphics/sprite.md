@@ -1,4 +1,22 @@
-{% include_relative navbar.html %}
+---
+
+title: Sprite
+date: 2024-01-24
+author: charya-s
+categories: classes graphics
+permalink: /graphics/Sprite/
+
+---
+
+
+{% include navbar.html %}
 
 # Sprite
-Class to draw textures as sprites.
+Used to render textures from .png files directly.
+
+<br>
+
+---
+### Inheritance
+- Drawable (abstract)
+    - **Sprite**

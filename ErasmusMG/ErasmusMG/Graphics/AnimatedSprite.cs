@@ -33,7 +33,7 @@ public class AnimatedSprite : Sprite
 
 
     // Play animation.
-    public void Play(string animName)
+    public void PlayAnimation(string animName)
     {
         if (!animations.ContainsKey(animName)) return; // Cancel play if animation doesn't exist.
         this.CurrentAnimation = animations[animName];
@@ -44,6 +44,6 @@ public class AnimatedSprite : Sprite
     public void AddAnimation(string name, int sheetRow, int animLen, int frameRate, Animation.LoopMode loopMode)
     {
         this.animations[name] = new Animation(name, sheetRow, animLen, this.Size, frameRate, loopMode);
-        if (animations.Count == 1) this.Play(name); // If it's the first animation, set it to be the starting point.
+        if (animations.Count == 1) this.PlayAnimation(name); // If it's the first animation, set it to be the starting point.
     }
 }

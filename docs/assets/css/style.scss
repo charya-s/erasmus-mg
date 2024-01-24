@@ -8,18 +8,29 @@ body {
     color: darkslategray;
 }
 
+body h1, h2, h3, h4 {
+    color: darksalmon;
+}
+
 header {
     border-bottom: 1px solid darksalmon;
+    background-color: seashell;
+}
+
+header h1:before 
+{ 
+    visibility: hidden;
+}
+
+header {
+    color: darkslategray;
+    text-shadow: none;
 }
 
 .container {
     width: 100%;
     max-width: 70vw;
     left: 20vw;
-}
-
-h1 {
-    color: darksalmon;
 }
 
 #main_content {    
