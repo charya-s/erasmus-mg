@@ -1,0 +1,55 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+body {
+    background: whitesmoke;
+    color: darkslategray;
+    font-size: 14px;
+}
+
+body h1, h2, h3, h4 {
+    color: darksalmon;
+}
+
+header {
+    border-bottom: 1px solid darksalmon;
+    background-color: seashell;
+}
+
+header h1:before 
+{ 
+    visibility: hidden;
+}
+
+header {
+    color: darkslategray;
+    text-shadow: none;
+}
+
+ul li {
+    list-style-image: url(../images/bullet.png);
+}
+
+.container {
+    width: 100%;
+    max-width: 70vw;
+    left: 20vw;
+}
+
+#main_content {    
+    margin-left: 10vw;
+}
+
+.navbar {
+    position: absolute;
+    margin: auto;
+    left: 5vw;
+}
+
+.nav-page:hover {
+    cursor: pointer;
+    color: darksalmon;
+    transition: 0.25s;
+}
