@@ -35,24 +35,30 @@ Used to render textures from .png files directly.
 {% highlight csharp %}
 Sprite(string name, Vector2 size, string pathToContent)
 {% endhighlight %}
-<br>| Parameter | Type | Description
+<br>| Parameter | Type | Description | 
 | ---- | ---- | ----------- |
 | name | string | Name of the component (used to identify it). |
-| size | Vector2 | Size of the sprite in vectors (without scaling). |
-| pathToContent | string | Path to the .png file within the "Content" folder (changeable). |
+| size | Vector2 | Size of the sprite (without scaling). |
+| pathToContent | string | Path to the .png file. |
 
 <br>
 
 ---
 ###  Public Properties
-Properties that can be accessed publicly.
 
-<br>| Property | Type | Description
-| ---- | ---- | ----------- |
-| Name | string | Name of the component (used to identify it). |
+<br>| Size | Vector2 | Size of the sprite (without scaling). |
+| ScaledSize | Vector2 | Size of the sprite as drawn (after scaling). |
+| Tint | Color | Color of the texture drawn. |
+| Origin | Vector2 | The origin of the texture relative to its scaled size. |
+| VisibleBox | bool | Whether the bounds of the texture are shown when drawn. |
 
 <br>
 
 ---
 ###  Methods
-Usable methods.
+{% highlight csharp %}
+void FlipH(int dir)
+{% endhighlight %}
+<br>| Parameter | Type | Description
+| ---- | ---- | ----------- |
+| dir | int | -1 to flip to left, +1 to flip to right. |

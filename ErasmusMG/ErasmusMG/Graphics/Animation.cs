@@ -34,7 +34,7 @@ public class Animation
 
 
     // Update method.
-    public virtual Rectangle Update(double delta)
+    public virtual Rectangle GetNextFrame(double delta)
     {
         // If not enough time has passed since last frame, don't update.
         if (this.timeSinceLastFrame < 1000 / this.frameRate)

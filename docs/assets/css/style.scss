@@ -18,6 +18,12 @@ header {
     background-color: seashell;
 }
 
+body a {
+    text-decoration: none;
+    text-shadow: none;
+    color: darkslategray;
+}
+
 header h1:before 
 { 
     visibility: hidden;
@@ -48,7 +54,7 @@ ul li {
     left: 5vw;
 }
 
-.nav-page:hover {
+body a:hover {
     cursor: pointer;
     color: darksalmon;
     transition: 0.25s;

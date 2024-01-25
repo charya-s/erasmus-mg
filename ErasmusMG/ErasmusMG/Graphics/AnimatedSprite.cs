@@ -28,7 +28,7 @@ public class AnimatedSprite : Sprite
     public override void Update(double delta)
     {
         base.Update(delta);
-        if (this.CurrentAnimation != null) sourceRect = CurrentAnimation.Update(delta);
+        if (this.CurrentAnimation != null) sourceRect = CurrentAnimation.GetNextFrame(delta);
     }
 
 
