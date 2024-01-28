@@ -4,12 +4,11 @@ using ErasmusTest.Source;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
-using System.Diagnostics;
 
 namespace ErasmusTest;
 public class Game : ErasmusMG.ErasmusMG
 {
-    private Player test;
+    private Level1 test;
     private TextLabel fpsCounter; 
     public Game()
     {
@@ -24,7 +23,7 @@ public class Game : ErasmusMG.ErasmusMG
     {
         base.LoadContent();
 
-        test = new Player("Player");
+        test = new Level1("Level1");        
         Engine.Root.AddToRoot(test);
 
         fpsCounter = new TextLabel("FpsCounter", "font.ttf", MathF.Round(Engine.Root.GameFPS).ToString());

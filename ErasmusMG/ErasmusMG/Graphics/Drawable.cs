@@ -16,16 +16,29 @@ public abstract class Drawable : Component
     public Vector2 Origin { get; set; } = Vector2.Zero;
     public bool VisibleBox { get; set; } = false;
     private Texture2D visibleBox { get; set; } = new Texture2D(Engine.Graphics.GraphicsDevice, 1, 1); // Draw a box according to the scale size.
+    public bool Visible { get; set; } = true; // Whether self is visible.
 
 
 
     // Constructors.
-    public Drawable(string name, string pathToContent) : base(name)
+    protected Drawable(string name) : base(name) // Unused.
     {
         this.visibleBox = new Texture2D(Engine.Graphics.GraphicsDevice, 1, 1);
         this.visibleBox.SetData(new Color[] { Color.LightBlue });
     }
-    public Drawable(string name, Vector2 size, string pathToContent) : base(name)
+    protected Drawable(string name, string pathToContent) : base(name) // Primarily for text.
+    {
+        this.visibleBox = new Texture2D(Engine.Graphics.GraphicsDevice, 1, 1);
+        this.visibleBox.SetData(new Color[] { Color.LightBlue });
+    }
+    protected Drawable(string name, Vector2 size) : base(name) // Unused.
+    {
+        this.Size = size;
+
+        this.visibleBox = new Texture2D(Engine.Graphics.GraphicsDevice, 1, 1);
+        this.visibleBox.SetData(new Color[] { Color.LightBlue });
+    }
+    protected Drawable(string name, Vector2 size, string pathToContent) : base(name) // Primarily for textures (sprites).
     {
         this.Size = size;
 
@@ -58,7 +71,7 @@ public abstract class Drawable : Component
             Engine.SpriteBatch.Draw(    this.visibleBox, 
                                         this.GlobalPosition, 
                                         this.sourceRect, 
-                                        Color.LightBlue * 0.75f, 
+                                        Color.White * 0.75f, 
                                         this.Rotation, 
                                         this.Origin, 
                                         this.Scale, 

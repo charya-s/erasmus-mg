@@ -1,3 +1,4 @@
+using ErasmusMG.Physics;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ public class Root
     // Properties.
     private Dictionary<string, List<Component>> groups { get; set; } = new(); // Groups that components can be assigned to.
     private Component rootComponent { get; set; } // Root component that contains all other components. 
+    public List<Collider> ActiveColliders { get; set; } = new(); // List of active colliders.
     private Queue<float> fpsValues = new(); // Last 100 FPS values.
     public float GameFPS { get; private set; } = 0.0f;
 

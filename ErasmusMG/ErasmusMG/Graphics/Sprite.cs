@@ -32,7 +32,7 @@ public class Sprite : Drawable
     // Draw.
     public override void Draw(double deltaTime)
     {
-        if (this.texture == null) return;
+        if (this.texture == null || !this.Visible) return;
         Engine.SpriteBatch.Draw(    this.texture,
                                     this.GlobalPosition,
                                     this.sourceRect,

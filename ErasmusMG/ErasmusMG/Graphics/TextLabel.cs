@@ -34,6 +34,7 @@ public class TextLabel : Drawable
     // Draw.
     public override void Draw(double deltaTime)
     {
+        if (!this.Visible) return;
         Engine.SpriteBatch.DrawString(  this.font,
                                         this.Text,
                                         this.GlobalPosition,

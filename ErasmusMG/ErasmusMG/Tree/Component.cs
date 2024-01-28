@@ -1,6 +1,3 @@
-
-
-
 using ErasmusMG.Globals;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
@@ -20,7 +17,7 @@ public class Component
     private Vector2 position = Vector2.Zero; // Position relative to parent.
     private Vector2 globalPosition = Vector2.Zero; // Position relative to window.
     public float Rotation { get; set; } = 0.0f;
-    private Vector2 scale { get; set; } = Vector2.One;
+    protected Vector2 scale { get; set; } = Vector2.One;
     public float LayerDepth { get; set; } = 0.0f;
 
 
