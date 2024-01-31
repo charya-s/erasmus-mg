@@ -50,9 +50,10 @@ public class PhysicsBody : Component
         if (!this.GetChildren().OfType<Collider>().Any() || !this.CanMove) return; // No collider attached or cannot move.
 
         Vector2 adjustedVelocity = this.Velocity * (float)deltaTime;
+        Dictionary<Collider, Vector2> collisions = this.GetChild<Collider>("Collider").GetCollisions(adjustedVelocity); // Get collisions that would occur after moving.
         Vector2 movedPos = new Vector2(this.Position.X + adjustedVelocity.X, this.Position.Y + adjustedVelocity.Y); // Look ahead a frame.
 
-        foreach (KeyValuePair<Collider, Vector2> collision in this.GetChild<Collider>("Collider").Collisions)
+        foreach (KeyValuePair<Collider, Vector2> collision in collisions)
         {
             // Top and bottom.
             if (collision.Value.Y == -1) // Collision on bottom, prevent move futher +Y.

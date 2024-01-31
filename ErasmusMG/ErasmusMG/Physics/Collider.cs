@@ -3,6 +3,7 @@ using ErasmusMG.Helpers;
 using ErasmusMG.Tree;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -13,7 +14,7 @@ public class Collider : Component
     // Properties.
     private Vector2 size { get; set; } // Size pre-scaling.
     public Rectangle ColliderBounds { get; private set; }   // The collision rectangle itself.
-    public Dictionary <Collider, Vector2> Collisions { get; private set; } = new(); // All current collisions and their directions.
+    //public Dictionary <Collider, Vector2> Collisions { get; private set; } = new(); // All current collisions and their directions.
     public bool active = true; // Is this collider active.
     private List<int> collisionMasks { get; set; } = new() { 1 }; // The layers this collider looks to collide with.
     private List<int> collisionLayers { get; set; } = new() { 1 }; // The layers this collider is in for other colliders to collide with it.
@@ -82,7 +83,7 @@ public class Collider : Component
                                             this.ColliderBounds.Width, this.ColliderBounds.Height);
 
         // Get current collisions.
-        this.GetCollisions();
+        //this.GetCollisions();
 
         base.Update(deltaTime);
     }
@@ -109,31 +110,56 @@ public class Collider : Component
     /* -------------------------------------------------------------------------------------------------------------- */
     /* -------------------------------------------- COLLISION HANDLING ---------------------------------------------- */
 
-    // Get collisions.
-    private void GetCollisions()
+    // Get collisions that would occur with the given motion.
+    public Dictionary<Collider, Vector2> GetCollisions(Vector2 motion) 
     {
-        this.Collisions.Clear(); // Clear list of collisions at start of check.
-        if (!this.Active) return; // Skip if self inactive.
+        //this.Collisions.Clear(); // Clear list of collisions at start of check.
+
+        Dictionary<Collider, Vector2> collisions = new(); // List of collisions.
+
+        // Get future collider rect as if we moved one unit in X and Y in the direction of motion.
+        Rectangle movedBounds = new Rectangle(this.ColliderBounds.X + Math.Sign(motion.X), this.ColliderBounds.Y + Math.Sign(motion.Y), this.ColliderBounds.Width, this.ColliderBounds.Height);
+
+        if (!this.Active) return null; // Skip if self inactive.
 
         // Loop through each active collider...
         foreach (Collider c in Engine.Root.ActiveColliders)
         {
             if (c == this) continue; // Skip self.
             if (!c.Active) continue; // Skip if target collider inactive.
-            if (Mather.DistanceBetweenRects(this.ColliderBounds, c.ColliderBounds) > this.ColliderBounds.Width*10f) continue; // Don't bother checking collisions on objects far away.
-            if (!c.ColliderBounds.Intersects(this.ColliderBounds)) continue; // No collision.
+            if (Mather.DistanceBetweenRects(movedBounds, c.ColliderBounds) > movedBounds.Width*10f) continue; // Don't bother checking collisions on objects far away.
+            if (!c.ColliderBounds.Intersects(movedBounds)) continue; // No collision.
             if (!c.collisionLayers.Intersect(this.collisionMasks).Any()) continue; // The target collider is not on any layers this one watches.
             
             // All checks pass and collision has occured, so get the direction of collision.
             Vector2 collDir = Vector2.Zero;
 
-            if (this.ColliderBounds.Y+this.ColliderBounds.Height >= c.ColliderBounds.Y) collDir = new Vector2(collDir.X, -1); // Collision on bottom.
-            else if (this.ColliderBounds.Y <= c.ColliderBounds.Y+c.ColliderBounds.Height) collDir = new Vector2(collDir.X, 1); // Collision on top.
+            // Collision can only occur from direction at a time.
+            if (movedBounds.Y + movedBounds.Height > c.ColliderBounds.Y && // Check if future pos intersects target.
+                this.ColliderBounds.Y + this.ColliderBounds.Height <= c.ColliderBounds.Y) // Check if target is on the correct side of the current box.
+            {
+                collDir = new Vector2(collDir.X, -1); // Collision on bottom.
+            }
+            else if (movedBounds.Y < c.ColliderBounds.Y + c.ColliderBounds.Height &&
+                this.ColliderBounds.Y >= c.ColliderBounds.Y + c.ColliderBounds.Height)
+            {
+                collDir = new Vector2(collDir.X, 1); // Collision on top.
+            }
 
-            if (this.ColliderBounds.X <= c.ColliderBounds.X+c.ColliderBounds.Width) collDir = new Vector2(-1, collDir.Y); // Collision on left.
-            else if (this.ColliderBounds.X+this.ColliderBounds.Width >= c.ColliderBounds.X) collDir = new Vector2(1, collDir.Y); // Collision on right.
+            if (movedBounds.X < c.ColliderBounds.X + c.ColliderBounds.Width &&
+                this.ColliderBounds.X >= c.ColliderBounds.X + c.ColliderBounds.Width)
+            {
+                collDir = new Vector2(-1, collDir.Y); // Collision on left.
+            }
+            else if (movedBounds.X + movedBounds.Width > c.ColliderBounds.X &&
+                this.ColliderBounds.X + this.ColliderBounds.Width <= c.ColliderBounds.X)
+            {
+                collDir = new Vector2(1, collDir.Y); // Collision on right.
+            }
 
-            this.Collisions.Add(c, collDir);
+            collisions.Add(c, collDir);
         }
+        if (this.GetParent().Name == "Player") foreach (var c in collisions) { Debug.WriteLine(c);  }
+        return collisions;
     }
 }

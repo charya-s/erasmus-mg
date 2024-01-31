@@ -52,11 +52,13 @@ public class Player : PhysicsBody
         base.Update(deltaTime);
 
         // Keyboard movement.
-        if (Keyboard.GetState().IsKeyDown(Keys.A)) this.Velocity = new Vector2(-250f, 0);
-        else if (Keyboard.GetState().IsKeyDown(Keys.D)) this.Velocity = new Vector2(250f, 0);
-        else if (Keyboard.GetState().IsKeyDown(Keys.S)) this.Velocity = new Vector2(0, 100f);
-        else if (Keyboard.GetState().IsKeyDown(Keys.W)) this.Velocity = new Vector2(0, -100f);
-        else this.Velocity = new Vector2(0, 0);
+        Vector2 moveDir = Vector2.Zero;
+        if (Keyboard.GetState().IsKeyDown(Keys.A)) moveDir += new Vector2(-1, 0);
+        else if (Keyboard.GetState().IsKeyDown(Keys.D)) moveDir += new Vector2(1, 0);
+        if (Keyboard.GetState().IsKeyDown(Keys.S)) moveDir += new Vector2(0, 1);
+        else if (Keyboard.GetState().IsKeyDown(Keys.W)) moveDir += new Vector2(0, -1);
+        
+        this.Velocity = moveDir * 250f;
 
         // Moving and idle anims.
         if (MathF.Abs(this.Velocity.X) > 0.1f) this.GetChild<AnimatedSprite>("Sprite").PlayAnimation("Move");
