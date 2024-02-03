@@ -241,39 +241,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\charya\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/charyas/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\charya\\Desktop\\Misc\\Personal-Projects\\Programming\\GameDev\\Monogame\\erasmus-mg\\ErasmusMG\\ErasmusTest\\ErasmusTest.csproj",
+      "projectUniqueName": "/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusTest/ErasmusTest.csproj",
       "projectName": "ErasmusTest",
-      "projectPath": "C:\\Users\\charya\\Desktop\\Misc\\Personal-Projects\\Programming\\GameDev\\Monogame\\erasmus-mg\\ErasmusMG\\ErasmusTest\\ErasmusTest.csproj",
-      "packagesPath": "C:\\Users\\charya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\charya\\Desktop\\Misc\\Personal-Projects\\Programming\\GameDev\\Monogame\\erasmus-mg\\ErasmusMG\\ErasmusTest\\obj\\",
+      "projectPath": "/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusTest/ErasmusTest.csproj",
+      "packagesPath": "/home/charyas/.nuget/packages/",
+      "outputPath": "/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusTest/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\charya\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/charyas/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\charya\\Desktop\\Misc\\Personal-Projects\\Programming\\GameDev\\Monogame\\erasmus-mg\\ErasmusMG\\ErasmusMG\\ErasmusMG.csproj": {
-              "projectPath": "C:\\Users\\charya\\Desktop\\Misc\\Personal-Projects\\Programming\\GameDev\\Monogame\\erasmus-mg\\ErasmusMG\\ErasmusMG\\ErasmusMG.csproj"
+            "/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusMG/ErasmusMG.csproj": {
+              "projectPath": "/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusMG/ErasmusMG.csproj"
             }
           }
         }
@@ -314,15 +307,11 @@
             "version": "[6.0.26, 6.0.26]"
           },
           {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
             "version": "[6.0.26, 6.0.26]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
             "version": "[6.0.26, 6.0.26]"
           }
         ],
@@ -331,7 +320,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
       }
     }
   }
