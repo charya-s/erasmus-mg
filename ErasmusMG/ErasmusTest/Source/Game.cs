@@ -7,6 +7,7 @@ using System;
 
 namespace ErasmusTest;
 public class Game : ErasmusMG.ErasmusMG
+
 {
     private Level1 test;
     private TextLabel fpsCounter; 
