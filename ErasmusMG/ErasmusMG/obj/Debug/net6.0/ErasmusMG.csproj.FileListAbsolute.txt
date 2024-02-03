@@ -1,15 +1,41 @@
-D:\Misc\Personal Projects\GameDev\Monogame\erasmus-engine\ErasmusMG\ErasmusMG\bin\Debug\net6.0\ErasmusMG.deps.json
-D:\Misc\Personal Projects\GameDev\Monogame\erasmus-engine\ErasmusMG\ErasmusMG\bin\Debug\net6.0\ErasmusMG.dll
-D:\Misc\Personal Projects\GameDev\Monogame\erasmus-engine\ErasmusMG\ErasmusMG\bin\Debug\net6.0\ErasmusMG.pdb
-D:\Misc\Personal Projects\GameDev\Monogame\erasmus-engine\ErasmusMG\ErasmusMG\obj\Debug\net6.0\ErasmusMG.csproj.AssemblyReference.cache
-D:\Misc\Personal Projects\GameDev\Monogame\erasmus-engine\ErasmusMG\ErasmusMG\obj\Debug\net6.0\ErasmusMG.GeneratedMSBuildEditorConfig.editorconfig
-D:\Misc\Personal Projects\GameDev\Monogame\erasmus-engine\ErasmusMG\ErasmusMG\obj\Debug\net6.0\ErasmusMG.AssemblyInfoInputs.cache
-D:\Misc\Personal Projects\GameDev\Monogame\erasmus-engine\ErasmusMG\ErasmusMG\obj\Debug\net6.0\ErasmusMG.AssemblyInfo.cs
-D:\Misc\Personal Projects\GameDev\Monogame\erasmus-engine\ErasmusMG\ErasmusMG\obj\Debug\net6.0\ErasmusMG.csproj.CoreCompileInputs.cache
-D:\Misc\Personal Projects\GameDev\Monogame\erasmus-engine\ErasmusMG\ErasmusMG\obj\Debug\net6.0\ErasmusMG.dll
-D:\Misc\Personal Projects\GameDev\Monogame\erasmus-engine\ErasmusMG\ErasmusMG\obj\Debug\net6.0\refint\ErasmusMG.dll
-D:\Misc\Personal Projects\GameDev\Monogame\erasmus-engine\ErasmusMG\ErasmusMG\obj\Debug\net6.0\ErasmusMG.pdb
-D:\Misc\Personal Projects\GameDev\Monogame\erasmus-engine\ErasmusMG\ErasmusMG\obj\Debug\net6.0\ref\ErasmusMG.dll
+D:/Misc/Personal Projects/GameDev/Monogame/erasmus-engine/ErasmusMG/ErasmusMG/bin/Debug/net6.0/ErasmusMG.deps.json
+D:/Misc/Personal Projects/GameDev/Monogame/erasmus-engine/ErasmusMG/ErasmusMG/bin/Debug/net6.0/ErasmusMG.dll
+D:/Misc/Personal Projects/GameDev/Monogame/erasmus-engine/ErasmusMG/ErasmusMG/bin/Debug/net6.0/ErasmusMG.pdb
+D:/Misc/Personal Projects/GameDev/Monogame/erasmus-engine/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.csproj.AssemblyReference.cache
+D:/Misc/Personal Projects/GameDev/Monogame/erasmus-engine/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.GeneratedMSBuildEditorConfig.editorconfig
+D:/Misc/Personal Projects/GameDev/Monogame/erasmus-engine/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.AssemblyInfoInputs.cache
+D:/Misc/Personal Projects/GameDev/Monogame/erasmus-engine/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.AssemblyInfo.cs
+D:/Misc/Personal Projects/GameDev/Monogame/erasmus-engine/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.csproj.CoreCompileInputs.cache
+D:/Misc/Personal Projects/GameDev/Monogame/erasmus-engine/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.dll
+D:/Misc/Personal Projects/GameDev/Monogame/erasmus-engine/ErasmusMG/ErasmusMG/obj/Debug/net6.0/refint/ErasmusMG.dll
+D:/Misc/Personal Projects/GameDev/Monogame/erasmus-engine/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.pdb
+D:/Misc/Personal Projects/GameDev/Monogame/erasmus-engine/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ref/ErasmusMG.dll
+C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusMG/bin/Debug/net6.0/ErasmusMG.deps.json
+C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusMG/bin/Debug/net6.0/ErasmusMG.dll
+C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusMG/bin/Debug/net6.0/ErasmusMG.pdb
+C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.csproj.AssemblyReference.cache
+C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.AssemblyInfoInputs.cache
+C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.AssemblyInfo.cs
+C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.csproj.CoreCompileInputs.cache
+C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.sourcelink.json
+C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.dll
+C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/refint/ErasmusMG.dll
+C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.pdb
+C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ref/ErasmusMG.dll
+/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusMG/bin/Debug/net6.0/ErasmusMG.deps.json
+/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusMG/bin/Debug/net6.0/ErasmusMG.dll
+/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusMG/bin/Debug/net6.0/ErasmusMG.pdb
+/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.csproj.AssemblyReference.cache
+/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.GeneratedMSBuildEditorConfig.editorconfig
+/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.AssemblyInfoInputs.cache
+/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.AssemblyInfo.cs
+/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.csproj.CoreCompileInputs.cache
+/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.sourcelink.json
+/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.dll
+/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/refint/ErasmusMG.dll
+/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ErasmusMG.pdb
+/run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusMG/obj/Debug/net6.0/ref/ErasmusMG.dll
 C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusMG\bin\Debug\net6.0\ErasmusMG.deps.json
 C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusMG\bin\Debug\net6.0\ErasmusMG.dll
 C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusMG\bin\Debug\net6.0\ErasmusMG.pdb
