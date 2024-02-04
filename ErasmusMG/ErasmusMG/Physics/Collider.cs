@@ -116,8 +116,10 @@ public class Collider : Component
 
         Dictionary<Collider, Vector2> collisions = new(); // List of collisions.
 
-        // Get future collider rect as if we moved one unit in X and Y in the direction of motion.
+        // Get future collider rects in X and Y as if we moved one unit in the direction of motion.
         Rectangle movedBounds = new Rectangle(this.ColliderBounds.X + Math.Sign(motion.X), this.ColliderBounds.Y + Math.Sign(motion.Y), this.ColliderBounds.Width, this.ColliderBounds.Height);
+        Rectangle movedX = new Rectangle(movedBounds.X, this.ColliderBounds.Y, this.ColliderBounds.Width, this.ColliderBounds.Height);
+        Rectangle movedY = new Rectangle(this.ColliderBounds.X, movedBounds.Y, this.ColliderBounds.Width, this.ColliderBounds.Height);
 
         if (!this.Active) return null; // Skip if self inactive.
 
@@ -127,36 +129,44 @@ public class Collider : Component
             if (c == this) continue; // Skip self.
             if (!c.Active) continue; // Skip if target collider inactive.
             if (Mather.DistanceBetweenRects(movedBounds, c.ColliderBounds) > movedBounds.Width*10f) continue; // Don't bother checking collisions on objects far away.
-            if (!c.ColliderBounds.Intersects(movedBounds)) continue; // No collision.
             if (!c.collisionLayers.Intersect(this.collisionMasks).Any()) continue; // The target collider is not on any layers this one watches.
-            
+            if (!c.ColliderBounds.Intersects(movedBounds)) continue;
+
             // All checks pass and collision has occured, so get the direction of collision.
             Vector2 collDir = Vector2.Zero;
 
-            //Debug.WriteLine(c.ColliderBounds + " : " + movedBounds);
-
-            // Collision can only occur from direction at a time.
-            if (movedBounds.Y + movedBounds.Height > c.ColliderBounds.Y && // Check if future pos intersects target.
-                this.ColliderBounds.Y + this.ColliderBounds.Height < c.ColliderBounds.Y + 1) // Check if target is on the correct side of the current box.
+            // Top-bottom collisions.
+            if (c.ColliderBounds.Intersects(movedY))
             {
-                collDir = new Vector2(collDir.X, -1); // Collision on bottom.
-            }
-            else if (movedBounds.Y < c.ColliderBounds.Y + c.ColliderBounds.Height &&
-                this.ColliderBounds.Y - 1 > c.ColliderBounds.Y + c.ColliderBounds.Height)
-            {
-                collDir = new Vector2(collDir.X, 1); // Collision on top.
+                // Collision on top.
+                if (movedY.Y < c.ColliderBounds.Y + c.ColliderBounds.Height && // Check if future pos intersects target.
+                    this.ColliderBounds.Y - 1 > c.ColliderBounds.Y + c.ColliderBounds.Height) // Check if target is on the correct side of the current box.
+                {
+                    collDir = new Vector2(collDir.X, 1);
+                }
+                // Collision on bottom.
+                else if (movedY.Y + movedY.Height > c.ColliderBounds.Y && 
+                this.ColliderBounds.Y + this.ColliderBounds.Height < c.ColliderBounds.Y + 1) 
+                {
+                    collDir = new Vector2(collDir.X, -1); 
+                }
             }
 
-            if (movedBounds.X < c.ColliderBounds.X + c.ColliderBounds.Width &&
+            // Left-right collisions.
+            if (c.ColliderBounds.Intersects(movedX))
+            {
+                // Collision on left.
+                if (movedX.X < c.ColliderBounds.X + c.ColliderBounds.Width &&
                 this.ColliderBounds.X - 1 > c.ColliderBounds.X + c.ColliderBounds.Width)
-            {
-                collDir = new Vector2(-1, collDir.Y); // Collision on left.
-            }
-            else if (movedBounds.X + movedBounds.Width > c.ColliderBounds.X &&
-                this.ColliderBounds.X + this.ColliderBounds.Width < c.ColliderBounds.X + 1)
-            {
-                Debug.WriteLine(c.ColliderBounds + " : " + movedBounds);
-                collDir = new Vector2(1, collDir.Y); // Collision on right.
+                {
+                    collDir = new Vector2(-1, collDir.Y); 
+                }
+                // Collision on right.
+                else if (movedX.X + movedX.Width > c.ColliderBounds.X &&
+                    this.ColliderBounds.X + this.ColliderBounds.Width < c.ColliderBounds.X + 1)
+                {
+                    collDir = new Vector2(1, collDir.Y); 
+                }
             }
 
             collisions.Add(c, collDir);
