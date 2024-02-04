@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ErasmusMG")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b7dc20e9e31f3d29be256d8a8f208af305153eb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+793b1653f18094556cad48c88d14b5dde2d9db98")]
 [assembly: System.Reflection.AssemblyProductAttribute("ErasmusMG")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ErasmusMG")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

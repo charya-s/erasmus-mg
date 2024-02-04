@@ -14,7 +14,6 @@ public class Collider : Component
     // Properties.
     private Vector2 size { get; set; } // Size pre-scaling.
     public Rectangle ColliderBounds { get; private set; }   // The collision rectangle itself.
-    //public Dictionary <Collider, Vector2> Collisions { get; private set; } = new(); // All current collisions and their directions.
     public bool active = true; // Is this collider active.
     private List<int> collisionMasks { get; set; } = new() { 1 }; // The layers this collider looks to collide with.
     private List<int> collisionLayers { get; set; } = new() { 1 }; // The layers this collider is in for other colliders to collide with it.
@@ -134,32 +133,34 @@ public class Collider : Component
             // All checks pass and collision has occured, so get the direction of collision.
             Vector2 collDir = Vector2.Zero;
 
+            //Debug.WriteLine(c.ColliderBounds + " : " + movedBounds);
+
             // Collision can only occur from direction at a time.
             if (movedBounds.Y + movedBounds.Height > c.ColliderBounds.Y && // Check if future pos intersects target.
-                this.ColliderBounds.Y + this.ColliderBounds.Height <= c.ColliderBounds.Y) // Check if target is on the correct side of the current box.
+                this.ColliderBounds.Y + this.ColliderBounds.Height < c.ColliderBounds.Y + 1) // Check if target is on the correct side of the current box.
             {
                 collDir = new Vector2(collDir.X, -1); // Collision on bottom.
             }
             else if (movedBounds.Y < c.ColliderBounds.Y + c.ColliderBounds.Height &&
-                this.ColliderBounds.Y >= c.ColliderBounds.Y + c.ColliderBounds.Height)
+                this.ColliderBounds.Y - 1 > c.ColliderBounds.Y + c.ColliderBounds.Height)
             {
                 collDir = new Vector2(collDir.X, 1); // Collision on top.
             }
 
             if (movedBounds.X < c.ColliderBounds.X + c.ColliderBounds.Width &&
-                this.ColliderBounds.X >= c.ColliderBounds.X + c.ColliderBounds.Width)
+                this.ColliderBounds.X - 1 > c.ColliderBounds.X + c.ColliderBounds.Width)
             {
                 collDir = new Vector2(-1, collDir.Y); // Collision on left.
             }
             else if (movedBounds.X + movedBounds.Width > c.ColliderBounds.X &&
-                this.ColliderBounds.X + this.ColliderBounds.Width <= c.ColliderBounds.X)
+                this.ColliderBounds.X + this.ColliderBounds.Width < c.ColliderBounds.X + 1)
             {
+                Debug.WriteLine(c.ColliderBounds + " : " + movedBounds);
                 collDir = new Vector2(1, collDir.Y); // Collision on right.
             }
 
             collisions.Add(c, collDir);
         }
-        if (this.GetParent().Name == "Player") foreach (var c in collisions) { Debug.WriteLine(c);  }
         return collisions;
     }
 }

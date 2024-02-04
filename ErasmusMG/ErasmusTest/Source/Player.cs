@@ -4,6 +4,7 @@ using ErasmusMG.Physics;
 using Microsoft.Xna.Framework.Input;
 using System.Diagnostics;
 using System;
+using System.Collections.Generic;
 
 namespace ErasmusTest.Source;
 public class Player : PhysicsBody
@@ -16,8 +17,8 @@ public class Player : PhysicsBody
         this.AddToGroup("Characters"); // Add to characters group.
 
         // Set properties.
-        this.GlobalPosition = new Vector2(200, 100);
-        this.Gravity = 0.0f;
+        this.GlobalPosition = new Vector2(200, 0);
+        this.Gravity = 500f;
 
 
         // Components.
@@ -49,18 +50,13 @@ public class Player : PhysicsBody
     // Update method.
     public override void Update(double deltaTime)
     {
-        base.Update(deltaTime);
-
         // Keyboard movement.
         Vector2 moveDir = Vector2.Zero;
         if (Keyboard.GetState().IsKeyDown(Keys.A)) moveDir += new Vector2(-1, 0);
-        else if (Keyboard.GetState().IsKeyDown(Keys.D)) moveDir += new Vector2(1, 0);
-        if (Keyboard.GetState().IsKeyDown(Keys.S)) moveDir += new Vector2(0, 1);
-        else if (Keyboard.GetState().IsKeyDown(Keys.W)) moveDir += new Vector2(0, -1);
-        
-        this.Velocity = moveDir * 250f;
+        if (Keyboard.GetState().IsKeyDown(Keys.D)) moveDir += new Vector2(1, 0);
 
-        // Moving and idle anims.
+        // Moving and idle anims.        
+        this.Velocity = moveDir * 250f;
         if (MathF.Abs(this.Velocity.X) > 0.1f) this.GetChild<AnimatedSprite>("Sprite").PlayAnimation("Move");
         else this.GetChild<AnimatedSprite>("Sprite").PlayAnimation("Idle");
 
@@ -69,10 +65,11 @@ public class Player : PhysicsBody
         else if (this.Velocity.X < 0) this.GetChild<AnimatedSprite>("Sprite").FlipH(-1);
 
         // Apply gravity.
-        this.Velocity = new Vector2(this.Velocity.X, this.Velocity.Y + this.Gravity * (float)deltaTime);
-
+        this.Velocity = new Vector2(this.Velocity.X, this.Velocity.Y + this.Gravity);
 
         // Apply physics motion.
-        this.MoveAndCollide(deltaTime);
+        Dictionary<Collider, Vector2> collisions = this.MoveAndCollide(deltaTime);
+
+        base.Update(deltaTime);
     }
 }

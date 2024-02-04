@@ -120,6 +120,16 @@ public class Component
     {
         return this.children;
     }
+    // Get list of children of specific type.
+    public List<T> GetChildren<T>() where T : Component
+    {
+        List<T> children = new();
+        foreach (Component child in this.children)
+        {
+            if (child.GetType() == typeof(T)) children.Add(child as T);
+        }
+        return children;
+    }
 
 
     /* ------------------------------------------------------------------------------------------------------- */

@@ -53,12 +53,10 @@ C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/eras
 C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusTest/obj/Debug/net6.0/ErasmusTest.pdb
 C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusTest/obj/Debug/net6.0/ErasmusTest.genruntimeconfig.cache
 C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusTest/obj/Debug/net6.0/ref/ErasmusTest.dll
-C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusTest/bin/Debug/net6.0/Content/player.png
 C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusTest/bin/Debug/net6.0/Cyotek.Drawing.BitmapFont.dll
 C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusTest/bin/Debug/net6.0/SpriteFontPlus.dll
 C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusTest/bin/Debug/net6.0/StbImageSharp.dll
 C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusTest/bin/Debug/net6.0/StbTrueTypeSharp.dll
-C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/erasmus-mg/ErasmusMG/ErasmusTest/bin/Debug/net6.0/Content/font.TTF
 /run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusTest/bin/Debug/net6.0/Content/font.TTF
 /run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusTest/bin/Debug/net6.0/Content/player.png
 /run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusTest/bin/Debug/net6.0/ErasmusTest
@@ -93,8 +91,6 @@ C:/Users/charya/Desktop/Misc/Personal-Projects/Programming/GameDev/Monogame/eras
 /run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusTest/obj/Debug/net6.0/ErasmusTest.pdb
 /run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusTest/obj/Debug/net6.0/ErasmusTest.genruntimeconfig.cache
 /run/media/charyas/New Volume/Dev/MonoGame/erasmus-mg/ErasmusMG/ErasmusTest/obj/Debug/net6.0/ref/ErasmusTest.dll
-C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\Content\font.ttf
-C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\Content\player.png
 C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\ErasmusTest.exe
 C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\ErasmusTest.deps.json
 C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\ErasmusTest.runtimeconfig.json
@@ -127,3 +123,9 @@ C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\eras
 C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\obj\Debug\net6.0\ErasmusTest.pdb
 C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\obj\Debug\net6.0\ErasmusTest.genruntimeconfig.cache
 C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\obj\Debug\net6.0\ref\ErasmusTest.dll
+C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\TiledCS.dll
+C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\Content\font.ttf
+C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\Content\map.png
+C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\Content\map.tmx
+C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\Content\map.tsx
+C:\Users\charya\Desktop\Misc\Personal-Projects\Programming\GameDev\Monogame\erasmus-mg\ErasmusMG\ErasmusTest\bin\Debug\net6.0\Content\player.png

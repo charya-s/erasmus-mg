@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "25hgyHR2JLd1o7Vxe2xn/JNNKfwD3wSPo4TuzHl8QhRBbWSQZu01PMuV2JdEThCsrXbQnNKDM85V7zCmYgyhaw==",
+  "dgSpecHash": "5IVAYKoHzPcVEFU/WXEDGA+4AiVKX3JCb58NRn252YHhtwbgr7abAm8T89uFcWmOMd7IxDrbvfyoo2IveLgokQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\charya\\Desktop\\Misc\\Personal-Projects\\Programming\\GameDev\\Monogame\\erasmus-mg\\ErasmusMG\\ErasmusMG\\ErasmusMG.csproj",
   "expectedPackageFiles": [
@@ -9,9 +9,10 @@
     "C:\\Users\\charya\\.nuget\\packages\\spritefontplus\\0.9.2\\spritefontplus.0.9.2.nupkg.sha512",
     "C:\\Users\\charya\\.nuget\\packages\\stbimagesharp\\2.22.4\\stbimagesharp.2.22.4.nupkg.sha512",
     "C:\\Users\\charya\\.nuget\\packages\\stbtruetypesharp\\1.24.7\\stbtruetypesharp.1.24.7.nupkg.sha512",
+    "C:\\Users\\charya\\.nuget\\packages\\tiledcs\\3.3.3\\tiledcs.3.3.3.nupkg.sha512",
+    "C:\\Users\\charya\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512",
     "C:\\Users\\charya\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\charya\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\charya\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512"
+    "C:\\Users\\charya\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512"
   ],
   "logs": []
 }

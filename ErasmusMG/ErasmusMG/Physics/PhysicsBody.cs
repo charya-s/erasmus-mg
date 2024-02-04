@@ -45,9 +45,9 @@ public class PhysicsBody : Component
 
 
     // Move and collide.
-    public void MoveAndCollide(double deltaTime)
+    public Dictionary<Collider, Vector2> MoveAndCollide(double deltaTime)
     {
-        if (!this.GetChildren().OfType<Collider>().Any() || !this.CanMove) return; // No collider attached or cannot move.
+        if (!this.GetChildren().OfType<Collider>().Any() || !this.CanMove) return null; // No collider attached or cannot move.
 
         Vector2 adjustedVelocity = this.Velocity * (float)deltaTime;
         Dictionary<Collider, Vector2> collisions = this.GetChild<Collider>("Collider").GetCollisions(adjustedVelocity); // Get collisions that would occur after moving.
@@ -82,5 +82,6 @@ public class PhysicsBody : Component
         }
         
         this.Position = movedPos; // No collisions, simply move.
+        return collisions;
     }
 }
