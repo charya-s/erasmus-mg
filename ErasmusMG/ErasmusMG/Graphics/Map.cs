@@ -101,6 +101,7 @@ public class Map : Drawable
             if (layer != layerName) continue; // Not collision layer.
 
             Collider collider = new(this.GetChildren<Collider>().Count.ToString(), new Vector2(src.Width, src.Height));
+
             collider.GlobalPosition = new Vector2(dest.X, dest.Y);
             this.AddChild(collider);
         }

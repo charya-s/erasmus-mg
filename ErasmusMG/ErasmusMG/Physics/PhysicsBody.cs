@@ -47,6 +47,7 @@ public class PhysicsBody : Component
     // Move and collide.
     public Dictionary<Collider, Vector2> MoveAndCollide(double deltaTime)
     {
+        this.IsOnGround = false; // Reset whether player is on the ground.
         if (!this.GetChildren().OfType<Collider>().Any() || !this.CanMove) return null; // No collider attached or cannot move.
 
         Vector2 adjustedVelocity = this.Velocity * (float)deltaTime;
@@ -83,5 +84,18 @@ public class PhysicsBody : Component
         
         this.Position = movedPos; // No collisions, simply move.
         return collisions;
+    }
+
+
+    // Apply gravity (optional) with terminal velocity.
+    public void ApplyGravity(float terminalVelocity)
+    {
+        this.Velocity = new Vector2(this.Velocity.X, this.Velocity.Y + this.Gravity);
+        if (this.Velocity.Y > terminalVelocity) this.Velocity = new Vector2(this.Velocity.X, terminalVelocity);
+    }
+    public void ApplyGravity(float gravity, float terminalVelocity)
+    {
+        this.Velocity = new Vector2(this.Velocity.X, this.Velocity.Y + gravity);
+        if (this.Velocity.Y > terminalVelocity) this.Velocity = new Vector2(this.Velocity.X, terminalVelocity);
     }
 }

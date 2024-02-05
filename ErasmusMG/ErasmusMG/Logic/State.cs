@@ -1,5 +1,5 @@
-﻿using Microsoft.Xna.Framework;
-using System.ComponentModel;
+﻿using ErasmusMG.Tree;
+using Microsoft.Xna.Framework;
 
 namespace ErasmusMG.Logic;
 public abstract class State
@@ -20,5 +20,5 @@ public abstract class State
     // Enter, exit and update state.
     public abstract void Enter();
     public abstract void Exit();
-    public abstract void Update(GameTime gameTime);
+    public abstract void Update(double deltaTime);
 }
